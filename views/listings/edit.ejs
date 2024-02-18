@@ -1,0 +1,47 @@
+<% layout("/layouts/boilerplate") %>
+
+    <div class="row">
+        <h3>Edit Listing Information</h3>
+
+        
+    <form method="post"  action="/listings/<%= listing._id %> ?_method=put">
+        <div class="mb-3">
+            <label for="exampleFormControlInput1" class="form-label"></label>
+            <input name="listing[title]" value="<%= listing.title %>" type="text" class="form-control" id="exampleFormControlInput1" placeholder="Enter your title">
+          </div>
+        
+          <div class="mb-3">
+            <label for="exampleFormControlTextarea1" class="form-label">Enter Description</label>
+            <textarea name="listing[description]"  class="form-control" id="exampleFormControlTextarea1" rows="2"><%= listing.description %></textarea>
+          </div>
+          
+        
+        
+        <div class="mb-3">
+            <label for="exampleFormControlTextarea2" class="form-label">Price</label>
+            <input name="listing[price]" class="form-control" value="<%= listing.price %>"  type="number" id="exampleFormControlTextarea2" ></input>
+          </div>
+          
+        <div class="row">
+
+          
+        <div class="mb-3 col-md-4">
+            <label for="exampleFormControlTextarea3" class="form-label">Enter image url</label>
+            <input name="listing[image]" value="<%= listing.image %>"  class="form-control" id="exampleFormControlTextarea3" ></input>
+          </div>
+        
+        <div class="mb-3 col-md-8">
+            <label for="exampleFormControlTextarea4" class="form-label">Location
+            </label>
+            <input name="listing[location]"  value="<%= listing.location %>"  class="form-control" id="exampleFormControlTextarea4" ></input>
+          </div>
+        </div>
+        <div class="mb-3">
+            <label for="exampleFormControlTextarea5" class="form-label">Country</label>
+            <input name="listing[country]" value="<%= listing.country %>"  class="form-control" id="exampleFormControlTextarea5" ></input>
+          </div>
+        <button class="button">Add</button>
+
+    </form>
+</div>
+
