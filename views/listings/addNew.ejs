@@ -4,21 +4,25 @@
         <h3>Create a New Listing</h3>
 
         
-    <form method="post"  action="/listings">
+    <form method="post"  action="/listings" novalidate class="needs-validation" >
         <div class="mb-3">
             <label for="exampleFormControlInput1" class="form-label"></label>
-            <input name="listing[title]" type="text" class="form-control" id="exampleFormControlInput1" placeholder="Enter your title">
+            <input name="listing[title]" type="text" class="form-control" 
+            id="exampleFormControlInput1" placeholder="Enter your title" required >
           </div>
         <div class="mb-3">
             <label for="exampleFormControlTextarea1" class="form-label">Enter Description</label>
-            <textarea name="listing[description]" class="form-control" id="exampleFormControlTextarea1" rows="2"></textarea>
+            <textarea name="listing[description]" class="form-control" id="exampleFormControlTextarea1" rows="2" required>
+
+            </textarea>
           </div>
           
         
         
         <div class="mb-3">
             <label for="exampleFormControlTextarea2" class="form-label">Price</label>
-            <input name="listing[price]" class="form-control" type="number" id="exampleFormControlTextarea2" ></input>
+            <input name="listing[price]" class="form-control" type="number" 
+            id="exampleFormControlTextarea2" required ></input>
           </div>
           
         <div class="row">
@@ -26,18 +30,21 @@
           
         <div class="mb-3 col-md-4">
             <label for="exampleFormControlTextarea3" class="form-label">Enter image url</label>
-            <input name="listing[image]" class="form-control" id="exampleFormControlTextarea3" ></input>
+            <input name="listing[image]" class="form-control" 
+            id="exampleFormControlTextarea3"  ></input>
           </div>
         
         <div class="mb-3 col-md-8">
             <label for="exampleFormControlTextarea4" class="form-label">Location
             </label>
-            <input name="listing[location]"  class="form-control" id="exampleFormControlTextarea4" ></input>
+            <input name="listing[location]"  class="form-control" 
+            id="exampleFormControlTextarea4" required ></input>
           </div>
         </div>
         <div class="mb-3">
             <label for="exampleFormControlTextarea5" class="form-label">Country</label>
-            <input name="listing[country]" class="form-control" id="exampleFormControlTextarea5" ></input>
+            <input name="listing[country]" class="form-control" 
+            id="exampleFormControlTextarea5" required ></input>
           </div>
         <button class="sub-btn">Add</button>
 
